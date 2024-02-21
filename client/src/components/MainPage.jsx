@@ -14,7 +14,7 @@ const MainPage = () => {
     const dispatch = useDispatch();
 
   const fetchTransactions = () => {
-    fetch(`http://localhost:5001/api/transactions/pagination?pageNumber=${1}&itemsPerPage=${10}`)
+    fetch(`https://dataapiapp-1.onrender.com/api/transactions/pagination?pageNumber=${1}&itemsPerPage=${10}`)
     .then(res => res.json())
     .then(data => {
         dispatch(setRenderList(data))
@@ -23,7 +23,7 @@ const MainPage = () => {
   }
 
   const fetchAllTransactions = () => {
-    fetch(`http://localhost:5001/api/transactions/getAllTransactions`)
+    fetch(`https://dataapiapp-1.onrender.com/api/transactions/getAllTransactions`)
     .then(res => res.json())
     .then(data => dispatch(setAllTransactions(data)))
   }
@@ -31,7 +31,7 @@ const MainPage = () => {
 
 
   const fetchTransactionsThatMonth = (month) => {
-    fetch(`http://localhost:5001/api/transactions/sortByMonth?month=${month}`)
+    fetch(`https://dataapiapp-1.onrender.com/api/transactions/sortByMonth?month=${month}`)
     .then(res => res.json())
     .then(data => dispatch(setRenderList(data)))
 }

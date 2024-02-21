@@ -10,11 +10,11 @@ const navigate = useNavigate();
 const dispatch = useDispatch();    
 
 const fetchForGraphs = (input) => {
-    fetch(`http://localhost:5001/api/transactions/getPieChartData?month=${input}`)
+    fetch(`https://dataapiapp-1.onrender.com/api/transactions/getPieChartData?month=${input}`)
     .then(res => res.json())
     .then(data => dispatch(setPieChartData(data)));
 
-    fetch(`http://localhost:5001/api/transactions/getBarChartData?month=${input}`)
+    fetch(`https://dataapiapp-1.onrender.com/api/transactions/getBarChartData?month=${input}`)
     .then(res => res.json())
     .then(data => dispatch(setBarGraphData(data)));
 

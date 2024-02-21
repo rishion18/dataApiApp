@@ -10,7 +10,7 @@ const Pagination = () => {
 
 
     const fetchData = () => {
-        fetch(`http://localhost:5001/api/transactions/pagination?pageNumber=${activePage}&itemsPerPage=${10}`)
+        fetch(`https://dataapiapp-1.onrender.com/api/transactions/pagination?pageNumber=${activePage}&itemsPerPage=${10}`)
         .then(res => res.json())
         .then(data => {
             dispatch(setRenderList(data))
